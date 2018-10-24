@@ -1,6 +1,6 @@
 package queue;
 /*
- * Ë³Ğò¶ÓÁĞ
+ * é¡ºåºé˜Ÿåˆ—
  */
 public class ArrayQueue {
 	private String[] items;
@@ -8,13 +8,13 @@ public class ArrayQueue {
 	private int head = 0;
 	private int tail = 0;
 	
-	//¹¹Ôìº¯Êı
+	//æ„é€ å‡½æ•°
 	public ArrayQueue(int capcity) {
 		items = new String[capcity];
 		this.n = capcity;
 	}
 	
-	//Èë¶Ó
+	//å…¥é˜Ÿ
 	public boolean enqueue(String item){
 		if(tail == n) return false;
 		items[tail] = item;
@@ -22,7 +22,7 @@ public class ArrayQueue {
 		return true;
 	}
 	
-	//³ö¶Ó
+	//å‡ºé˜Ÿ
 	public String dequeue(){
 		if(head == tail) return null;
 		String ret = items[head];
