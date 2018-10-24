@@ -1,6 +1,6 @@
 package queue;
 /*
- * Á´Ê½¶ÓÁĞµÄÊµÏÖ
+ * é“¾å¼é˜Ÿåˆ—çš„å®ç°
  * fhy
  */
 
@@ -18,7 +18,7 @@ public class LinkedQueue {
 	private Node head = null;
 	private Node tail = null;
 		
-	//Èë¶Ó
+	//å…¥é˜Ÿ
 	public void enqueue(String item){	
 		if(head == null) {
 			Node newNode = new Node(item, null);
@@ -30,7 +30,7 @@ public class LinkedQueue {
 		}
 	}
 	
-	//³ö¶Ó
+	//å‡ºé˜Ÿ
 	public String dequeue(){
 		if(head == null){
 			return null;
