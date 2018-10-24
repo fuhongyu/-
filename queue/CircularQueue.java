@@ -1,6 +1,6 @@
 package queue;
 /*
- * Ñ­»·¶ÓÁÐÊµÏÖ
+ * å¾ªçŽ¯é˜Ÿåˆ—å®žçŽ°
  * fhy
  * 
  */
@@ -10,24 +10,24 @@ public class CircularQueue {
 	private int tail = 0;
 	private int head = 0;
 	
-	//¹¹Ôìº¯Êý
+	//æž„é€ å‡½æ•°
 	public CircularQueue(int capcity){
 		items = new String[capcity];
 		this.n = capcity;		
 	}
 	
-	//Èë¶Ó
+	//å…¥é˜Ÿ
 	public boolean enqueue(String item){
-		//ÒÑÂú
+		//å·²æ»¡
 		if((tail+1)/n == 0) return false;
 		items[tail] = item;
 		tail = (tail+1)%n;
 		return true;
 	}
 	
-	//³ö¶Ó
+	//å‡ºé˜Ÿ
 	public String dequeue(){
-		//Îª¿Õ
+		//ä¸ºç©º
 		if(head == tail) return null;
 		String ret = items[head];
 		head = (head + 1)/n;
